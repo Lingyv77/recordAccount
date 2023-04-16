@@ -1,0 +1,133 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 0 10%;
+  box-sizing: border-box;
+}
+.wrap {
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 700px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+input {
+  width: 150px;
+  margin-right: 5px;
+  height: 20px;
+  padding: 3px 5px;
+}
+.select-form {
+  font-size: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline-color: #8764ff;
+  outline-width: 1px;
+}
+.select-form .input-item, .select-form button {
+  margin: 5px;
+}
+.select-form button {
+  border-style: none;
+  background: #6262ff;
+  color: white;
+  box-sizing: content-box;
+  text-align: center;
+  padding: 0 20px;
+  height: 30px;
+  width: 40px;
+  line-height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+form button[type="reset"] {
+  background: #ffffff;
+  border: 1px solid #6262ff;
+  color: #6262ff;
+}
+    .title {
+      box-sizing: border-box;
+      width: 100%;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #cccccc;
+      text-align: left;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+      .title-text {
+        font-size: 30px;
+        font-weight: bold;
+      }
+      .title a {
+        font-size: 16px;
+        padding-top: 10px;
+      }
+    .item {
+      margin: 20px 0;
+      border-radius: 5px;
+      border: 1px solid #c5c5c5;
+    }
+    .item .item-title {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      padding: 10px;
+      height: 25px;
+      line-height: 25px;
+      border-bottom: 1px solid #c5c5c5;
+      display: flex;
+      align-items: center;
+    }
+    .item-wrap {
+      min-height: 40px;
+      padding: 10px 20px;
+    }
+      .item-main {
+        display: flex;
+        align-items: center;
+      }
+        .item-time {
+          flex: 1;
+        }
+        .item-matter {
+          flex: 1;
+          font-weight: bold;
+        }
+        .item-type {
+          padding: 3px 10px;
+          text-align: center;
+          border-radius: 3px;
+          color: white;
+        }
+        .item-income {
+          background: #41d241;
+        }
+        .item-expenditure {
+          background: #568883;
+        }
+        .item-number {
+          margin: 0 10px;
+          font-weight: bold;
+        }
+        .item-option {
+          position: relative;
+          cursor: pointer;
+          transition: opacity 0.3s;
+        }
+          .item-option span {
+            margin-right: 10px;
+          }
+        .item-remark {
+          font-size: 13px;
+        }
+.btn-options {
+  display: flex;
+  justify-content: end;
+  padding: 10px 10px 30px 10px;
+}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/account/create.css">
+</head>
+<body>
+<div class="wrap">
+    <div class="title">
+        <span class="title-text">修改记录</span>
+        <a href="/record/list" target="_self">查看记录</a>
+    </div>
+    <form action="<%= editURL %>" method="post">
+        <input value="<%= data._id %>" hidden name="_id"/>
+        <div class="item">
+            <label class="item-title" for="matter">事项</label>
+            <input type="text" name="matter" value="<%= data.matter %>"/>
+        </div>
+        <div class="item">
+            <label class="item-title" for="time">发生时间</label>
+            <input type="date" name="time" value="<%= data.time %>"/>
+        </div>
+        <div class="item">
+            <label class="item-title" for="type">类型</label>
+            <select name="type" value="<%= data.type %>">
+                <% if (data.type === 1) { %>
+                    <option value="-1">支出</option>
+                    <option value="1" selected>收入</option>
+                <% } else { %>
+                    <option value="-1" selected>支出</option>
+                    <option value="1">收入</option>
+                <% } %>
+            </select>
+        </div>
+        <div class="item">
+            <label class="item-title" for="number">金额</label>
+            <input type="number" name="number" value="<%= data.number %>"/>
+        </div>
+        <div class="item">
+            <label class="item-title" for="remark">备注</label>
+            <textarea name="remark"><%= data.remark %></textarea>
+        </div>
+        <div class="item">
+            <button type="submit">确定</button>
+        </div>
+        <div class="btn-options">
+            <a href="/logout">退出</a>
+        </div>
+    </form>
+</div>
+</body>
+</html>

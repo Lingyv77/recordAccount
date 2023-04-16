@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/account/recordList.css">
+</head>
+<body>
+<div class="wrap">
+    <form class="select-form" id="selectForm" novalidate>
+        <div style="display: flex; flex-wrap: wrap;">
+          <div class="input-item">
+              事项: &nbsp;<input type="text" name="matter" value="<%= form.matter %>" placeholder="请输入事项">
+          </div>
+          <div class="input-item">
+              最大金额: &nbsp;<input type="number" name="number" value="<%= form.number %>" placeholder="请输入金额最大范围">
+          </div>
+        </div>
+        <div>
+            <button type="submit">搜索</button>
+            <button type="reset" id="reset">重置</button>
+        </div>
+    </form>
+    <div class="title">
+        <span class="title-text">记账本</span>
+        <a href="<%= createURL %>" target="_self">创建记录</a>
+    </div>
+    <% recordList.forEach(record => { %>
+    <div class="item">
+        <div class="item-title <%= Number(record.type) === 1 ? 'item-income' : 'item-expenditure' %>">
+            <span class="item-time"><%= record.time %></span>
+            <div class="item-option">
+                <span onclick="edit('<%= record.id %>')">🖊</span>
+                <span class="delete-icon" onclick="deleteRecord('<%= deleteURL %>', '<%= record.id %>')">❌</span>
+            </div>
+        </div>
+        <div class="item-wrap">
+            <div class="item-main">
+                <div class="item-matter"><%= record.matter %></div>
+                <span class="item-number"><%= record.number %>元</span>
+                <% if (Number(record.type) === 1) { %>
+                    <span class="item-income item-type">收入</span>
+                <% } else { %>
+                    <span class="item-expenditure item-type">支出</span>
+                <% } %>
+            </div>
+            <div class="item-remark">
+                <%= record.remark %>
+            </div>
+        </div>
+    </div>
+    <% }) %>
+    <div class="btn-options">
+        <a href="/logout">退出</a>
+    </div>
+    <script src="/javascripts/utils/common.js"></script>
+    <script src="/javascripts/account/recordList.js"></script>
+</div>
+</body>
+</html>

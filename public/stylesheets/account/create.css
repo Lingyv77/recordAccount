@@ -1,0 +1,77 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 0 10%;
+}
+* {
+  box-sizing: border-box;
+}
+  .wrap {
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+.title {
+  box-sizing: border-box;
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #cccccc;
+  text-align: left;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title-text {
+  font-size: 30px;
+  font-weight: bold;
+}
+.title a {
+  font-size: 16px;
+  padding-top: 10px;
+}
+    .item {
+      margin: 20px 0;
+    }
+    .item .item-title {
+      padding-bottom: 10px;
+      display: block;
+      font-weight: 600;
+    }
+    .item input {
+      width: 100%;
+      height: 30px;
+      padding: 5px 10px;
+    }
+    .item input:focus-visible, .item textarea:focus-visible, .item select:focus-visible {
+      outline-color: #8764ff;
+      outline-width: 1px;
+    }
+    .item textarea {
+      height: 60px;
+      width: 100%;
+    }
+    .item select {
+      width: 100%;
+      height: 30px;
+      padding: 5px 10px;
+    }
+    .item button {
+      border-style: none;
+      background: #6262ff;
+      color: white;
+      text-align: center;
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+.btn-options {
+  display: flex;
+  justify-content: end;
+  padding: 0 10px;
+  margin-bottom: 30px;
+}
